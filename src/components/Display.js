@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 
 const Display = (props) => {
-  if (props.products.length == 0) {
+  if (props.products.length === 0) {
     return (
       <div className="row align-items-center">
         <div className="col">No Matching Results Found!</div>

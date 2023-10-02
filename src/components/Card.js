@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function importImage(imageName) {
   return require(`../assets/${imageName}`);
@@ -10,8 +10,8 @@ const Card = (props) => {
       <h5 className="card-title pt-2">{props.product.name}</h5>
       <img
         className="card-img-top"
+        alt={props.product.id}
         src={importImage(props.product.imageURL)}
-        alt="Card image cap"
       />
       <div className="card-body row justify-content-between">
         <p className="card-text col-4">
@@ -19,9 +19,7 @@ const Card = (props) => {
             <strong>Rs {props.product.price}</strong>
           </small>
         </p>
-        <a href="#" className="btn btn-secondary btn-sm col-6">
-          Add to Cart
-        </a>
+        <button className="btn btn-secondary btn-sm col-6">Add to Cart</button>
       </div>
     </div>
   );

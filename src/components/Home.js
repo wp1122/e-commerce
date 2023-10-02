@@ -107,7 +107,7 @@ const Home = () => {
 
   const handleFiltering = () => {
     let filteredValues = productsData;
-    if (searchedWord && searchedWord != "") {
+    if (searchedWord && searchedWord !== "") {
       filteredValues = filteredValues.filter((product) =>
         handleSearchWord(product)
       );
@@ -115,7 +115,7 @@ const Home = () => {
     }
 
     Object.keys(filters).forEach((category) => {
-      if (category == "price") {
+      if (category === "price") {
         if (Object.values(filters.price).includes(true)) {
           filteredValues = filteredValues.filter((product) => {
             if (product.price <= 250 && filters.price["Under₹250"]) return true;
@@ -167,6 +167,7 @@ const Home = () => {
                   onClick={() => setShowFilter(!showFilter)}
                 >
                   <img
+                    alt="filtericon"
                     src={filter}
                     style={{ filter: "invert(1)" }}
                     width={25}
