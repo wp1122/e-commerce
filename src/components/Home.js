@@ -14,6 +14,9 @@ const defaultFilters = {
     black: false,
     pink: false,
     purple: false,
+    grey: false,
+    white: false,
+    yellow: false,
   },
   gender: {
     men: false,

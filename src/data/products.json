@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "imageURL": "polo.jpg",
+      "imageURL": "blackpolo.jpg",
       "name": "Black Polo",
       "type": "Polo",
       "price": 250,
@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "imageURL": "polo.jpg",
+      "imageURL": "bluepolo.jpg",
       "name": "Blue Polo",
       "type": "Polo",
       "price": 350,
@@ -23,7 +23,7 @@
     },
     {
       "id": 3,
-      "imageURL": "polo.jpg",
+      "imageURL": "pinkpolo.jpg",
       "name": "Pink Polo",
       "type": "Polo",
       "price": 350,
@@ -34,7 +34,7 @@
     },
     {
       "id": 4,
-      "imageURL": "hoodie.jpg",
+      "imageURL": "blackhoodie.jpg",
       "name": "Black Hoodie",
       "type": "Hoodie",
       "price": 500,
@@ -45,29 +45,29 @@
     },
     {
       "id": 5,
-      "imageURL": "polo.jpg",
-      "name": "Green Polo",
+      "imageURL": "whitepolo.jpg",
+      "name": "White Polo",
       "type": "Polo",
       "price": 250,
       "currency": "INR",
-      "color": "Green",
+      "color": "White",
       "gender": "Men",
       "quantity": 1
     },
     {
       "id": 6,
-      "imageURL": "polo.jpg",
-      "name": "Green Polo",
+      "imageURL": "greypolo.jpg",
+      "name": "Grey Polo",
       "type": "Polo",
       "price": 350,
       "currency": "INR",
-      "color": "Green",
+      "color": "Grey",
       "gender": "Women",
       "quantity": 1
     },
     {
       "id": 7,
-      "imageURL": "polo.jpg",
+      "imageURL": "bluehoodie.jpg",
       "name": "Blue Hoodie",
       "type": "Hoodie",
       "price": 500,
@@ -78,7 +78,7 @@
     },
     {
       "id": 8,
-      "imageURL": "polo.jpg",
+      "imageURL": "blackhoodie.jpg",
       "name": "Black Hoodie",
       "type": "Hoodie",
       "price": 500,
@@ -89,7 +89,7 @@
     },
     {
       "id": 9,
-      "imageURL": "polo.jpg",
+      "imageURL": "blueround.jpg",
       "name": "Blue Round",
       "type": "Basic",
       "price": 300,
@@ -100,7 +100,7 @@
     },
     {
       "id": 10,
-      "imageURL": "polo.jpg",
+      "imageURL": "redround.jpg",
       "name": "Red Round",
       "type": "Basic",
       "price": 300,
@@ -111,7 +111,7 @@
     },
     {
       "id": 11,
-      "imageURL": "polo.jpg",
+      "imageURL": "greyround.jpg",
       "name": "Grey Round",
       "type": "Basic",
       "price": 300,
@@ -122,7 +122,7 @@
     },
     {
       "id": 12,
-      "imageURL": "polo.jpg",
+      "imageURL": "purplehoodie.jpg",
       "name": "Purple Hoodie",
       "type": "Hoodie",
       "price": 500,
@@ -133,7 +133,7 @@
     },
     {
       "id": 13,
-      "imageURL": "polo.jpg",
+      "imageURL": "greyround.jpg",
       "name": "Grey Round",
       "type": "Basic",
       "price": 300,
@@ -144,7 +144,7 @@
     },
     {
       "id": 14,
-      "imageURL": "polo.jpg",
+      "imageURL": "whiteround.jpg",
       "name": "White Round",
       "type": "Basic",
       "price": 300,
@@ -155,7 +155,7 @@
     },
     {
       "id": 15,
-      "imageURL": "polo.jpg",
+      "imageURL": "blackround.jpg",
       "name": "Black Round",
       "type": "Basic",
       "price": 300,
@@ -166,7 +166,7 @@
     },
     {
       "id": 16,
-      "imageURL": "polo.jpg",
+      "imageURL": "purpleround.jpg",
       "name": "Purple Round",
       "type": "Basic",
       "price": 300,
@@ -177,7 +177,7 @@
     },
     {
       "id": 17,
-      "imageURL": "polo.jpg",
+      "imageURL": "whiteround.jpg",
       "name": "White Round",
       "type": "Basic",
       "price": 300,
@@ -188,7 +188,7 @@
     },
     {
       "id": 18,
-      "imageURL": "polo.jpg",
+      "imageURL": "blueround.jpg",
       "name": "Blue Round",
       "type": "Basic",
       "price": 300,
@@ -199,7 +199,7 @@
     },
     {
       "id": 19,
-      "imageURL": "polo.jpg",
+      "imageURL": "yellowhoodie.jpg",
       "name": "Yellow Hoodie",
       "type": "Hoodie",
       "price": 500,
@@ -210,7 +210,7 @@
     },
     {
       "id": 20,
-      "imageURL": "polo.jpg",
+      "imageURL": "whitepolo.jpg",
       "name": "White Polo",
       "type": "Polo",
       "price": 350,
@@ -221,7 +221,7 @@
     },
     {
       "id": 21,
-      "imageURL": "polo.jpg",
+      "imageURL": "redpolo.jpg",
       "name": "Red Polo",
       "type": "Polo",
       "price": 250,
@@ -232,7 +232,7 @@
     },
     {
       "id": 22,
-      "imageURL": "polo.jpg",
+      "imageURL": "bluehoodie.jpg",
       "name": "Blue Hoodie",
       "type": "Hoodie",
       "price": 500,
@@ -243,7 +243,7 @@
     },
     {
       "id": 23,
-      "imageURL": "polo.jpg",
+      "imageURL": "greyhoodie.jpg",
       "name": "Grey Hoodie",
       "type": "Hoodie",
       "price": 500,
@@ -254,7 +254,7 @@
     },
     {
       "id": 24,
-      "imageURL": "polo.jpg",
+      "imageURL": "greypolo.jpg",
       "name": "Grey Polo",
       "type": "Polo",
       "price": 300,
@@ -265,7 +265,7 @@
     },
     {
       "id": 25,
-      "imageURL": "polo.jpg",
+      "imageURL": "redhoodie.jpg",
       "name": "Red Hoodie",
       "type": "Hoodie",
       "price": 300,
@@ -276,7 +276,7 @@
     },
     {
       "id": 26,
-      "imageURL": "polo.jpg",
+      "imageURL": "whitepolo.jpg",
       "name": "White Polo",
       "type": "Polo",
       "price": 300,
@@ -287,7 +287,7 @@
     },
     {
       "id": 27,
-      "imageURL": "polo.jpg",
+      "imageURL": "whitehoodie.jpg",
       "name": "White Hoodie",
       "type": "Hoodie",
       "price": 500,
@@ -298,7 +298,7 @@
     },
     {
       "id": 28,
-      "imageURL": "polo.jpg",
+      "imageURL": "greyround.jpg",
       "name": "Grey Round",
       "type": "Basic",
       "price": 300,
@@ -309,7 +309,7 @@
     },
     {
       "id": 29,
-      "imageURL": "polo.jpg",
+      "imageURL": "blackround.jpg",
       "name": "Black Round",
       "type": "Basic",
       "price": 300,
@@ -320,7 +320,7 @@
     },
     {
       "id": 30,
-      "imageURL": "polo.jpg",
+      "imageURL": "blackpolo.jpg",
       "name": "Black Polo",
       "type": "Polo",
       "price": 300,

@@ -32,7 +32,7 @@ const Filter = (props) => {
                 return (
                   <li key={j}>
                     <input
-                      value={props.filters[category][key]}
+                      checked={props.filters[category][key]}
                       type="checkbox"
                       id={`${category}:${key}`}
                       onChange={handleFilterChange}
