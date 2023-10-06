@@ -6,33 +6,59 @@ import Filter from "./Filter";
 import productsData from "../data/products.json";
 import filter from "../assets/filter.png";
 
-const defaultFilters = {
-  color: {
-    red: false,
-    blue: false,
-    green: false,
-    black: false,
-    pink: false,
-    purple: false,
-    grey: false,
-    white: false,
-    yellow: false,
-  },
-  gender: {
-    men: false,
-    women: false,
-  },
-  type: {
-    polo: false,
-    hoodie: false,
-    basic: false,
-  },
-  price: {
-    "Under₹250": false,
-    "₹251-₹450": false,
-    "Over₹450": false,
-  },
-};
+const defaultFilters = {};
+
+let minPrice = 0; //for finding max and min price in products data
+let maxPrice = Number.MIN_VALUE;
+
+productsData.forEach((product) => {
+  //looping through products data
+  for (const key in product) {
+    if (key === "price") {
+      //if key is price
+      defaultFilters[key] = defaultFilters[key] || {}; //creating an empty object named price in our defaultfilters object
+      const price = product.price;
+      maxPrice = Math.max(maxPrice, price); //finding maxprice from products data
+    } else if (key === "color" || key === "gender" || key === "type") {
+      //for other keys
+      const value = product[key].toLowerCase();
+      defaultFilters[key] = defaultFilters[key] || {}; //if obj doesnt exist make an empty obj else let it be
+      defaultFilters[key][value] = false; //insert that specific key:val in that obj with val as false
+    }
+  }
+});
+
+const rangeSize = 150; //choosing default range interval of 150
+
+//array of price range objects
+const priceRanges = [];
+for (
+  let startPrice = minPrice;
+  startPrice <= maxPrice;
+  startPrice += rangeSize
+) {
+  const endPrice = startPrice + rangeSize - 1;
+  priceRanges.push({
+    label: `Rs ${startPrice} - Rs ${endPrice}`,
+    min: startPrice,
+    max: endPrice,
+  });
+}
+
+let lastPriceRange, maxRangeVal; //for largest range in price : Over ₹ABC
+
+priceRanges.forEach((range, index) => {
+  //loop through priceRange array and insert in our price obj of defaultFilter obj
+  if (index < priceRanges.length - 1)
+    // other ranges are like ₹ABC - ₹XYZ
+    defaultFilters.price[`₹${range.min} - ₹${range.max}`] = false;
+  else {
+    // for the special case of largest range which is Over ₹ABC
+    defaultFilters.price[`Over ₹${range.min}`] = false;
+    lastPriceRange = `Over ₹${range.min}`; //string "Over ₹ABC"
+    maxRangeVal = range.min; //number value ABC
+  }
+});
 
 const Home = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -117,20 +143,35 @@ const Home = () => {
       filteredValues.sort(handleSorting);
     }
 
+    console.log(filters);
+
     Object.keys(filters).forEach((category) => {
+      //looping through selected filters(using checkboxes)
       if (category === "price") {
+        //if category is price
         if (Object.values(filters.price).includes(true)) {
+          //if any of the price range is marked true
           filteredValues = filteredValues.filter((product) => {
-            if (product.price <= 250 && filters.price["Under₹250"]) return true;
-            else if (
-              product.price > 250 &&
-              product.price <= 450 &&
-              filters.price["₹251-₹450"]
-            )
-              return true;
-            else if (product.price > 450 && filters.price["Over₹450"])
-              return true;
-            else return false;
+            //loop through all products
+            const price = product.price;
+            for (const [key, value] of Object.entries(filters.price)) {
+              //key = specific range in price, value=true/false
+              if (value) {
+                if (key == lastPriceRange) {
+                  //special case of largest price range "₹ABC - ₹XYZ"
+                  if (price >= maxRangeVal) return true;
+                } else {
+                  //normal price range "Over ₹ABC"
+                  const [minStr, maxStr] = key.split(" - "); //split in two strings
+                  const min = parseInt(minStr.slice(1)); // Removing the ₹ symbol and parse as integer
+                  const max = parseInt(maxStr.slice(1));
+                  if (price >= min && price <= max) {
+                    return true;
+                  }
+                }
+              }
+            }
+            return false; //if for a product, all the keys have been checked and none is true, return false
           });
         }
       } else {

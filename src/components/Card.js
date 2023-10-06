@@ -6,7 +6,7 @@ function importImage(imageName) {
 
 const Card = (props) => {
   return (
-    <div className="card col-sm-5 col-md-3 col-9 m-1">
+    <div className="card col-sm-5 col-md-3 col-9 m-1 mb-2">
       <h5 className="card-title pt-2">{props.product.name}</h5>
       <img
         width={190}
