@@ -10,7 +10,7 @@ const Display = (props) => {
     );
   }
   return (
-    <div className="row justify-content-around">
+    <div className="row justify-content-around pb-2">
       {props.products.map((product) => (
         <Card key={product.id} product={product} />
       ))}
